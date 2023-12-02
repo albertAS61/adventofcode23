@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import findSantaDestinationFloor from "./firstPuzzle";
 
-test("first day puzzle", () => {
+test("first day, first puzzle", () => {
   const groundFloor = findSantaDestinationFloor("(())");
   expect(groundFloor).toBe(0);
 
