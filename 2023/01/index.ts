@@ -1,7 +1,13 @@
 import findSantaDestinationFloor from "./firstPuzzle.ts";
+import { resolveCalibration } from './secondPuzzle.ts';
 
-const inputFile = Bun.file("2023/01/firstPuzzleInput.txt");
-const inputText = await inputFile.text();
+const firstInputFile = Bun.file("firstPuzzleInput.txt");
+const firstInputText = await firstInputFile.text();
 
-const firstPuzzleResult = findSantaDestinationFloor(inputText);
+const firstPuzzleResult = findSantaDestinationFloor(firstInputText);
 console.log(firstPuzzleResult);
+
+const secondInputFile = Bun.file("secondPuzzleInput.txt");
+const secondInputText = await secondInputFile.text();
+const secondPuzzleResult = await resolveCalibration(secondInputText);
+console.log(secondPuzzleResult);
